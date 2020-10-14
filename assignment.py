@@ -20,8 +20,8 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author: Naomi
-    # Modified:
+    # Author: Naomi, John
+    # Modified: (number 2 - John)
     print("==================")
     print("HOW TO USE: ")
     print("==================")
@@ -36,7 +36,7 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-
+    # Author: John
     
     
     if shape == "cube":
