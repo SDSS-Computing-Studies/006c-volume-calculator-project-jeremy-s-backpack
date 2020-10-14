@@ -7,8 +7,11 @@ def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("================================")
+    print("WELCOME TO THE VOLUME CALCULATOR")
+    print("================================")
     
     return None
 
