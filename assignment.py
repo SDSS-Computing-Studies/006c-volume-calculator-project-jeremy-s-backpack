@@ -25,6 +25,8 @@ def instructions():
     print("HOW TO USE: ")
     print("==================")
     print('1. Choose any of the "shape" options given to you')
+    print("2. ")
+    print("")
     return None
 
 def getParams(shape):
