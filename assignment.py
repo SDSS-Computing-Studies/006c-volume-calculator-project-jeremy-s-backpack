@@ -7,8 +7,11 @@ def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("================================")
+    print("WELCOME TO THE VOLUME CALCULATOR")
+    print("================================")
     
     return None
 
@@ -16,8 +19,14 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("==================")
+    print("HOW TO USE: ")
+    print("==================")
+    print('1. Choose any of the "shape" options given to you')
+    print("2. ")
+    print("")
     return None
 
 def getParams(shape):
