@@ -101,9 +101,15 @@ def calc():
     li2=getInputs()
     type1=shape
     if type1=="cube":
-        pass
+        side=li2[0]
+        answer=side**3
+        return answer
     if type1=="cylinder":
-        pass
+        r=li2[0]
+        he=li2[1]
+        answer=(math.pi * (r**2))*he
+        return answer
+
     if type1=="cone":
         pass
     if type1=="rectangular prism":
@@ -124,5 +130,7 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
+    instructions()
+    calc()
 
-calc()
+main()
