@@ -19,8 +19,12 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("==================")
+    print("HOW TO USE: ")
+    print("==================")
+    print('1. Choose any of the "shape" options given to you')
     return None
 
 def getParams(shape):
