@@ -8,8 +8,11 @@ def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("================================")
+    print("WELCOME TO THE VOLUME CALCULATOR")
+    print("================================")
     
     return None
 
@@ -17,8 +20,14 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Naomi
     # Modified:
+    print("==================")
+    print("HOW TO USE: ")
+    print("==================")
+    print('1. Choose any of the "shape" options given to you')
+    print("2. ")
+    print("")
     return None
 
 def getParams(shape):
@@ -73,7 +82,16 @@ def getInputs(questions):
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
-    measurements
+    shape=input("Enter the shape you wish to calculate the volume for: ")
+    questions=getParams(shape)
+    numInd=questions.count()
+    print(questions)
+    meList=[]
+    num1=0
+    for i in range(0,numInd):
+        num1=float(input("Enter the next dimension: "))
+        meList.insert(i,num1)
+    measurements=meList    
     
     return measurements
 
@@ -83,4 +101,4 @@ def main():
     # the user chooses to exit
     title()
 
-main()
+getInputs()
