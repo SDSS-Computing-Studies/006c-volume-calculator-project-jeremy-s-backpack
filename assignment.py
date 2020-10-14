@@ -20,14 +20,14 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author: Naomi
-    # Modified:
+    # Author: Naomi, John
+    # Modified: (number 2 - John)
     print("==================")
     print("HOW TO USE: ")
     print("==================")
     print('1. Choose any of the "shape" options given to you')
-    print("2. The calculator ")
-    print("")
+    print("2. The shapes: cube, cylinder, cone, rectangular prism, sphere, triangular prism, pyramid")
+    print("3. ")
     return None
 
 def getParams(shape):
@@ -36,7 +36,7 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-
+    # Author: John
     
     
     if shape == "cube":
@@ -98,12 +98,19 @@ def getInputs():
     return measurements
 
 def calc():
+    #Author: John and Jeremy
     li2=getInputs()
     type1=shape
     if type1=="cube":
-        pass
+        side=li2[0]
+        answer=side**3
+        return answer
     if type1=="cylinder":
-        pass
+        r=li2[0]
+        he=li2[1]
+        answer=(math.pi * (r**2))*he
+        return answer
+
     if type1=="cone":
         pass
     if type1=="rectangular prism":
@@ -124,5 +131,7 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
+    instructions()
+    calc()
 
-calc()
+main()
