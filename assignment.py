@@ -98,6 +98,7 @@ def getInputs():
     return measurements
 
 def calc():
+    #Author: John and Jeremy
     li2=getInputs()
     type1=shape
     if type1=="cube":
