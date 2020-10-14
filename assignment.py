@@ -97,23 +97,23 @@ def getInputs():
     
     return measurements
 
-def calc(type1):
+def calc():
+    li2=getInputs()
     type1=shape
-
     if type1=="cube":
-    
+        pass
     if type1=="cylinder":
-    
+        pass
     if type1=="cone":
-    
+        pass
     if type1=="rectangular prism":
-    
+        pass
     if type1=="sphere":
-
+        pass
     if type1=="triangular prism":
-    
+        pass
     if type1=="pyramid":
-        
+        pass
 
     
 
@@ -125,4 +125,4 @@ def main():
     # the user chooses to exit
     title()
 
-getInputs()
+calc()
