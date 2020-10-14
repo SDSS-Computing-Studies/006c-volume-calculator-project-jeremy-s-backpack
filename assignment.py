@@ -10,9 +10,9 @@ def title():
     # output parameters: None
     # Author: Naomi
     # Modified:
-    print("================================")
-    print("WELCOME TO THE VOLUME CALCULATOR")
-    print("================================")
+    print("==================================")
+    print(" WELCOME TO THE VOLUME CALCULATOR")
+    print("==================================")
     
     return None
 
@@ -26,7 +26,7 @@ def instructions():
     print("HOW TO USE: ")
     print("==================")
     print('1. Choose any of the "shape" options given to you')
-    print("2. ")
+    print("2. The calculator ")
     print("")
     return None
 
