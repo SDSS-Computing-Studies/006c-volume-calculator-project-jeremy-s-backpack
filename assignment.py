@@ -36,7 +36,7 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-    prompts
+
     
     
     if shape == "cube":
@@ -76,20 +76,21 @@ def getParams(shape):
 
     return prompts
 
-def getInputs(questions):
+def getInputs():
     # Will prompt the user for inputs for the shape they.
     # These will be asked so that the user can enter in appropriate values
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
+    #Author: Jeremy
     shape=input("Enter the shape you wish to calculate the volume for: ")
     questions=getParams(shape)
-    numInd=questions.count()
     print(questions)
+    numInd=len(questions)
     meList=[]
     num1=0
     for i in range(0,numInd):
-        num1=float(input("Enter the next dimension: "))
+        num1=float(input("Enter dimension "+str(i+1)+": "))
         meList.insert(i,num1)
     measurements=meList    
     
