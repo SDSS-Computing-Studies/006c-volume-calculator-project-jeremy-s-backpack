@@ -83,6 +83,7 @@ def getInputs():
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
     #Author: Jeremy
+    global shape
     shape=input("Enter the shape you wish to calculate the volume for: ")
     questions=getParams(shape)
     print(questions)
@@ -95,6 +96,28 @@ def getInputs():
     measurements=meList    
     
     return measurements
+
+def calc(type1):
+    type1=shape
+
+    if type1=="cube":
+    
+    if type1=="cylinder":
+    
+    if type1=="cone":
+    
+    if type1=="rectangular prism":
+    
+    if type1=="sphere":
+
+    if type1=="triangular prism":
+    
+    if type1=="pyramid":
+        
+
+    
+
+
 
 def main():
     # main block of code that will run your program and control program flow
