@@ -132,6 +132,8 @@ def main():
     # the user chooses to exit
     title()
     instructions()
-    calc()
+    ans=calc()
+    ans=print(ans)
+    return ans
 
 main()
