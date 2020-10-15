@@ -133,13 +133,25 @@ def calc():
 
     if type1=="cone":
         # Formula: V = πr^2(h/3)
-        
+        r=li2[0]
+        h=li2[1]
+        num1=(h/3)
+        num2=math.pi*(r**2)
+        answer=num1*num2
+        return answer
     if type1=="rectangular prism":
         # Formula: V = whL
-        pass
+        l=li2[0]
+        w=li2[1]
+        h=li2[2]
+        answer=l*w*h
+        return answer
     if type1=="sphere":
         # Formula: V = (4/3)πr^3
-        pass
+        r=li2[0]
+        num1=4/3
+        answer=num1*math.pi*(r**3)
+        return answer
     if type1=="triangular prism":
         # Formula: V = (1/2)bhL
         pass
