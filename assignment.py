@@ -127,14 +127,15 @@ def calc():
         # Formula: V = L^3
         side=li2[0]
         answer=side**3
+        answer=round(answer,2)
         return answer
     if type1=="cylinder":
         # Formula: V = πr^2h
         r=li2[0]
         he=li2[1]
         answer=(math.pi * (r**2))*he
+        answer=round(answer,2)
         return answer
-
     if type1=="cone":
         # Formula: V = πr^2(h/3)
         r=li2[0]
@@ -142,6 +143,7 @@ def calc():
         num1=(h/3)
         num2=math.pi*(r**2)
         answer=num1*num2
+        answer=round(answer,2)
         return answer
     if type1=="rectangular prism":
         # Formula: V = whL
@@ -149,20 +151,34 @@ def calc():
         w=li2[1]
         h=li2[2]
         answer=l*w*h
+        answer=round(answer,2)
         return answer
     if type1=="sphere":
         # Formula: V = (4/3)πr^3
         r=li2[0]
         num1=4/3
         answer=num1*math.pi*(r**3)
+        answer=round(answer,2)
         return answer
     if type1=="triangular prism":
         # Formula: V = (1/2)bhL
-        pass
+        base = li2[0]
+        height = li2[1]
+        length = li2[2]
+
+        answer = 0.5*base*height*length
+        answer = round(answer,2)
+        return answer
+        
     if type1=="pyramid":
         # Formula: V = (Lwh)/3
-        pass
+        length = li2[0]
+        width = li2[1]
+        height = li2[2]
 
+        answer = (length*width*height)/3
+        answer = round(answer,2)
+        return answer
     
 
 
@@ -174,7 +190,7 @@ def main():
     title()
     instructions()
     ans=calc()
-    ans=print(ans)
+    ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
     return ans
 
 main()
