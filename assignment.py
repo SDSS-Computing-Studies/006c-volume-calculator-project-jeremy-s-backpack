@@ -109,7 +109,7 @@ def getInputs():
     sh=("cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid")
     global shape
     shape=input("Enter the shape you wish to calculate the volume for: ")
-    while shape not in sh:
+    while (shape not in sh) and shape!="quit":
         print("What you have entered is not a shape,")
         print("please try again...")
         shape=input("Enter the shape you wish to calculate the volume for: ")
@@ -123,13 +123,20 @@ def getInputs():
         for i in range(0,numInd):
             num1=float(input("Enter dimension "+str(i+1)+": "))
             meList.insert(i,num1)
-        measurements=meList    
+        measurements=meList  
+
+    if shape=="quit":
+        measurements="Thank you for using volume calculator"  
     return measurements
+
 
 def calc():
     #Author: John and Jeremy
     li2=getInputs()
     type1=shape
+    if li2=="Thank you for using volume calculator":
+        answer="Thank you for using volume calculator"
+        return answer
     if type1=="cube":
         # Formula: V = L^3
         side=li2[0]
@@ -198,8 +205,15 @@ def main():
     title()
     instructions()
     ans=calc()
-    ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
-    return ans
-    getInputs()
+    if calc!="Thank you for using volume calculator":
+
+        ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
+        return ans
+    if calc=="Thank you for using volume calculator":
+        ans="Thank you for using volume calculator"
+        return ans
+
+    
+   
 
 main()
