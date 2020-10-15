@@ -109,12 +109,12 @@ def getInputs():
     sh=("cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid")
     global shape
     shape=input("Enter the shape you wish to calculate the volume for: ")
-    if shape != sh:
+    while shape not in sh:
         print("What you have entered is not a shape,")
         print("please try again...")
-        getInputs()
+        shape=input("Enter the shape you wish to calculate the volume for: ")
         
-    elif shape == sh:
+    if shape in sh:
         questions=getParams(shape)
         print(questions)
         numInd=len(questions)
@@ -200,5 +200,6 @@ def main():
     ans=calc()
     ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
     return ans
+    getInputs()
 
 main()
