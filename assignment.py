@@ -45,8 +45,8 @@ def instructions():
     print("===========")
     print('1. Choose any of the "shape" options given to you\n')
     print("2. Once you have chosen your shapes we will ask you to enter ")
-    print("   numbers based on the peramiters needed for the chosen shape.\n")
-    print("3. Once you have entered all of the peramiters the volume of your ")
+    print("   numbers based on the parametres needed for the chosen shape.\n")
+    print("3. Once you have entered all of the parametres the volume of your ")
     print("   shape will be calculated and rounded to the nearset tenth.\n")
     print("The shapes:\n -cube\n -cylinder\n -cone\n -rectangular\n -prism\n -sphere\n -triangular prism\n -pyramid\n")
     
