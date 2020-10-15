@@ -142,11 +142,23 @@ def calc():
         pass
     if type1=="triangular prism":
         # Formula: V = (1/2)bhL
-        pass
+        base = li2[0]
+        height = li2[1]
+        length = li2[2]
+
+        answer = 0.5*base*height*length
+        answer = round(answer,2)
+        return answer
+        
     if type1=="pyramid":
         # Formula: V = (Lwh)/3
-        pass
+        length = li2[0]
+        width = li2[1]
+        height = li2[2]
 
+        answer = (length*width*height)/3
+        answer = round(answer,2)
+        return answer
     
 
 
