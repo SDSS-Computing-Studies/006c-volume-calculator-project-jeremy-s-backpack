@@ -186,7 +186,7 @@ def main():
     title()
     instructions()
     ans=calc()
-    ans=print(ans)
+    ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
     return ans
 
 main()
