@@ -3,7 +3,7 @@
 # Feel free to rename your variables
 
 import math
-
+sh=["cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid"]
 
 def title():
     # Will display a title screen
@@ -106,7 +106,8 @@ def getInputs():
     # output parameter: return a list containing all the measurements of the shape
     #Author: Jeremy
     #Modified: Naomi(if statments)
-    sh=("cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid")
+    
+    sh=["cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid"]
     global shape
     shape=input("Enter the shape you wish to calculate the volume for: ")
     while (shape not in sh) and shape!="quit":
@@ -124,19 +125,17 @@ def getInputs():
             num1=float(input("Enter dimension "+str(i+1)+": "))
             meList.insert(i,num1)
         measurements=meList  
-
     if shape=="quit":
-        measurements="Thank you for using volume calculator"  
+        quit()
     return measurements
 
 
 def calc():
     #Author: John and Jeremy
     li2=getInputs()
+    global type1
     type1=shape
-    if li2=="Thank you for using volume calculator":
-        answer="Thank you for using volume calculator"
-        return answer
+    
     if type1=="cube":
         # Formula: V = L^3
         side=li2[0]
@@ -202,16 +201,19 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
+    # Author: Jeremy
     title()
     instructions()
-    ans=calc()
-    if calc!="Thank you for using volume calculator":
+    
+    shape=''
+    while shape!="quit":
+        answer=calc()
+        
 
-        ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
-        return ans
-    if calc=="Thank you for using volume calculator":
-        ans="Thank you for using volume calculator"
-        return ans
+        print("The volume of the " +str(type1)+" you specified is " + str(answer) +" units cubed." )
+            
+        
+    
 
     
    
