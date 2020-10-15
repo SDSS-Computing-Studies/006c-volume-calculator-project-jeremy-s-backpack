@@ -123,13 +123,13 @@ def calc():
         # Formula: V = L^3
         side=li2[0]
         answer=side**3
-        return answer
+        answer=round(answer,2)
     if type1=="cylinder":
         # Formula: V = πr^2h
         r=li2[0]
         he=li2[1]
         answer=(math.pi * (r**2))*he
-        return answer
+        answer=round(answer,2)
 
     if type1=="cone":
         # Formula: V = πr^2(h/3)
@@ -138,20 +138,20 @@ def calc():
         num1=(h/3)
         num2=math.pi*(r**2)
         answer=num1*num2
-        return answer
+        answer=round(answer,2)
     if type1=="rectangular prism":
         # Formula: V = whL
         l=li2[0]
         w=li2[1]
         h=li2[2]
         answer=l*w*h
-        return answer
+        answer=round(answer,2)
     if type1=="sphere":
         # Formula: V = (4/3)πr^3
         r=li2[0]
         num1=4/3
         answer=num1*math.pi*(r**3)
-        return answer
+        answer=round(answer,2)
     if type1=="triangular prism":
         # Formula: V = (1/2)bhL
         pass
