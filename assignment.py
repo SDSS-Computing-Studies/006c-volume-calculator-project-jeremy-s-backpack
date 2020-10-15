@@ -3,7 +3,7 @@
 # Feel free to rename your variables
 
 import math
-
+shape=''
 def title():
     # Will display a title screen
     # input parameters: none needed
@@ -96,17 +96,15 @@ def getParams(shape):
         pyramid = ["Enter the length", "Enter the width", "Enter the height"]
         return pyramid
 
-    return prompts
-
-def getInputs():
+def getInputs(shape):
     # Will prompt the user for inputs for the shape they.
     # These will be asked so that the user can enter in appropriate values
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
     #Author: Jeremy
-    global shape
-    shape=input("Enter the shape you wish to calculate the volume for: ")
+    
+    
     questions=getParams(shape)
     print(questions)
     numInd=len(questions)
@@ -119,24 +117,23 @@ def getInputs():
     
     return measurements
 
-def calc():
+def calc(lis):
     #Author: John and Jeremy
-    li2=getInputs()
-    type1=shape
-    if type1=="cube":
+    li2=lis
+    if shape=="cube":
         # Formula: V = L^3
         side=li2[0]
         answer=side**3
         answer=round(answer,2)
         return answer
-    if type1=="cylinder":
+    if shape=="cylinder":
         # Formula: V = πr^2h
         r=li2[0]
         he=li2[1]
         answer=(math.pi * (r**2))*he
         answer=round(answer,2)
         return answer
-    if type1=="cone":
+    if shape=="cone":
         # Formula: V = πr^2(h/3)
         r=li2[0]
         h=li2[1]
@@ -145,7 +142,7 @@ def calc():
         answer=num1*num2
         answer=round(answer,2)
         return answer
-    if type1=="rectangular prism":
+    if shape=="rectangular prism":
         # Formula: V = whL
         l=li2[0]
         w=li2[1]
@@ -153,14 +150,14 @@ def calc():
         answer=l*w*h
         answer=round(answer,2)
         return answer
-    if type1=="sphere":
+    if shape=="sphere":
         # Formula: V = (4/3)πr^3
         r=li2[0]
         num1=4/3
         answer=num1*math.pi*(r**3)
         answer=round(answer,2)
         return answer
-    if type1=="triangular prism":
+    if shape=="triangular prism":
         # Formula: V = (1/2)bhL
         base = li2[0]
         height = li2[1]
@@ -170,7 +167,7 @@ def calc():
         answer = round(answer,2)
         return answer
         
-    if type1=="pyramid":
+    if shape=="pyramid":
         # Formula: V = (Lwh)/3
         length = li2[0]
         width = li2[1]
@@ -189,8 +186,14 @@ def main():
     # the user chooses to exit
     title()
     instructions()
-    ans=calc()
-    ans=print("The volume of the " +str(shape)+" you specified is " + str(ans) +" units cubed." )
-    return ans
+    
+    shape=input("Enter the shape you want to calculate the volume of: ")
+
+    lis=getInputs(shape)
+    num=calc(lis)
+    num = print(num)
+    return num
+
+
 
 main()
