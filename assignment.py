@@ -4,6 +4,7 @@
 
 import math
 
+
 def title():
     # Will display a title screen
     # input parameters: none needed
@@ -96,7 +97,7 @@ def getParams(shape):
         pyramid = ["Enter the length", "Enter the width", "Enter the height"]
         return pyramid
 
-    return prompts
+    
 
 def getInputs():
     # Will prompt the user for inputs for the shape they.
@@ -105,18 +106,25 @@ def getInputs():
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
     #Author: Jeremy
+    #Modified: Naomi(if statments)
+    sh=("cube", "cylinder", "cone", "rectangular prism", "sphere", "triangular prism", "pyramid")
     global shape
     shape=input("Enter the shape you wish to calculate the volume for: ")
-    questions=getParams(shape)
-    print(questions)
-    numInd=len(questions)
-    meList=[]
-    num1=0
-    for i in range(0,numInd):
-        num1=float(input("Enter dimension "+str(i+1)+": "))
-        meList.insert(i,num1)
-    measurements=meList    
-    
+    if shape != sh:
+        print("What you have entered is not a shape,")
+        print("please try again...")
+        getInputs()
+        
+    elif shape == sh:
+        questions=getParams(shape)
+        print(questions)
+        numInd=len(questions)
+        meList=[]
+        num1=0
+        for i in range(0,numInd):
+            num1=float(input("Enter dimension "+str(i+1)+": "))
+            meList.insert(i,num1)
+        measurements=meList    
     return measurements
 
 def calc():
