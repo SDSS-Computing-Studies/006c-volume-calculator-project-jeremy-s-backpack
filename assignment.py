@@ -120,24 +120,31 @@ def calc():
     li2=getInputs()
     type1=shape
     if type1=="cube":
+        # Formula: V = L^3
         side=li2[0]
         answer=side**3
         return answer
     if type1=="cylinder":
+        # Formula: V = πr^2h
         r=li2[0]
         he=li2[1]
         answer=(math.pi * (r**2))*he
         return answer
 
     if type1=="cone":
-        pass
+        # Formula: V = πr^2(h/3)
+        
     if type1=="rectangular prism":
+        # Formula: V = whL
         pass
     if type1=="sphere":
+        # Formula: V = (4/3)πr^3
         pass
     if type1=="triangular prism":
+        # Formula: V = (1/2)bhL
         pass
     if type1=="pyramid":
+        # Formula: V = (Lwh)/3
         pass
 
     
