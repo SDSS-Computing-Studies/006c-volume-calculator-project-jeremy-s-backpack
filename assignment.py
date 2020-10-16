@@ -126,6 +126,7 @@ def getInputs():
             meList.insert(i,num1)
         measurements=meList  
     if shape=="quit":
+        print("Thank you for using the volume calculator.")
         quit()
     return measurements
 
@@ -214,8 +215,4 @@ def main():
             
         
     
-
-    
-   
-
 main()
